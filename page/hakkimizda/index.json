@@ -1,0 +1,48 @@
+{
+  "name": {
+    "tr": "Hikâye",
+    "en": "Story",
+    "ar": "قصتنا"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "history",
+  "desing": {
+    "header": [],
+    "body": [
+      "mn9ld7",
+      "2ttvrx",
+      "6bj5le"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Dört tabureden bugüne; vardiya çizelgesi (kurgusal).",
+    "en": "From four stools to today; the shift chart (fictional).",
+    "ar": "من أربعة مقاعد إلى اليوم؛ جدول الورديات (افتراضي)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Hikâye",
+    "en": "Story",
+    "ar": "قصتنا"
+  },
+  "keyword": {
+    "tr": "hikâye, usta",
+    "en": "story, master",
+    "ar": "قصة، معلّم"
+  },
+  "text": {},
+  "update": "2026-11-16T20:35:11.009Z",
+  "date": "2026-10-30"
+}

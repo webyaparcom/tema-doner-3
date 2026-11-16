@@ -1,0 +1,57 @@
+{
+  "name": "İletişim Açık / Kapalı — çiviye asılı kapı levhası, tek saat aralığından canlı durum",
+  "description": "Yanda başlık, metin ve öteki kanallar (adres · telefon · WhatsApp · e-posta) eylemli satırlar; öbür yanda çiviye iple asılı, hafifçe sallanan kapı levhası: çalışma saati etiketi ve metni. Saat verisinde TEK saat aralığı (ör. «Her gün 10–22», gece yarısını aşabilir) varsa JS yerel saatle levhayı «açık» (yanan lamba + aralığın geçen kesri çubuğu) ya da «@booking-closed@» kipine alır; birden çok aralık ya da aralıksız metinde gün ayrıştırılmaz, levha yalnız saatleri yazar. iletisim-durum-rozeti süs nabızlı sabit rozet, iletisim-saat-cizelge aralıkları 24 saat eksenine çizer; bu modül GERÇEK DURUM levhası: tek aralıktan açık/kapalı hesabı (acikKapali; gece yarısı aşımı dahil), lamba + --oran çubuğu ve iki diyagonal gradient iple çiviye asılı sallanan levha. Kanallar desing'den (adres · telefon · WhatsApp · e-posta · saat) + data satırları; etiketler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Kanal yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "door_open",
+  "category": "contact",
+  "subCategory": "open-closed-sign",
+  "tags": [
+    "contact",
+    "hours",
+    "status",
+    "live",
+    "sign",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "adres": "",
+    "telefon": "",
+    "eposta": "",
+    "whatsapp": "",
+    "saat": "",
+    "haritaUrl": "",
+    "haritaGomme": "",
+    "waMesaj": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing",
+    "alanlar": {
+      "ikon": "Material Symbols adı (kanal türü ikondan da anlaşılır: mail · call · location_on · schedule)",
+      "deger": "dil sözlüğü (görünen değer, zorunlu; eski `text`)",
+      "url": "bağlantı (boşsa e-posta/telefon/haritadan türetilir)",
+      "baslik": "dil sözlüğü (kanal etiketi)"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+<section class="modulex-galeri-kategori-raflari{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-galeri-kategori-raflari-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* galeri-kategori-raflari — galeri-sekmeli ve galeri-filtre-cip aynı anda TEK kategoriyi gösterir, galeri-album-kutu kategorileri kapağa kapatır, galeri-film-serit tek ray. Bu modül tüm kategorileri aynı anda alt alta raflar halinde (yayın platformu satırları) açar; her rafın kendi kaydırma durumu ve düğmeleri vardır (çoklu ray istemcisi). */
+  .modulex-galeri-kategori-raflari { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-galeri-kategori-raflari *, .modulex-galeri-kategori-raflari *::before, .modulex-galeri-kategori-raflari *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-galeri-kategori-raflari :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-galeri-kategori-raflari :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-galeri-kategori-raflari :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-galeri-kategori-raflari :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-galeri-kategori-raflari img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-galeri-kategori-raflari) img { height: auto; }
+  .modulex-galeri-kategori-raflari [hidden] { display: none !important; }
+  .modulex-galeri-kategori-raflari :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-galeri-kategori-raflari :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-galeri-kategori-raflari-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-galeri-kategori-raflari-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-galeri-kategori-raflari--bassiz .modulex-galeri-kategori-raflari-bas { display: none; }
+  .modulex-galeri-kategori-raflari-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-galeri-kategori-raflari-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-galeri-kategori-raflari-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-galeri-kategori-raflari-bas { max-width: 760px; }
+  .modulex-galeri-kategori-raflari-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-galeri-kategori-raflari-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-galeri-kategori-raflari-dugme:hover { transform: translateY(-2px); }
+  .modulex-galeri-kategori-raflari-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-galeri-kategori-raflari-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-galeri-kategori-raflari-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-galeri-kategori-raflari-raflar { display: grid; gap: clamp(30px, 4vw, 46px); }
+  .modulex-galeri-kategori-raflari-sira { display: grid; grid-template-columns: minmax(170px, 230px) minmax(0, 1fr); align-items: start; gap: clamp(18px, 3vw, 36px); padding-block-start: 22px; border-block-start: 1px solid --cizgi--; }
+  .modulex-galeri-kategori-raflari-sbas { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px 10px; position: sticky; inset-block-start: 96px; }
+  .modulex-galeri-kategori-raflari-sad { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.25rem, 2vw, 1.6rem); font-weight: 750; line-height: 1.2; }
+  .modulex-galeri-kategori-raflari-adet { min-width: 32px; padding: 2px 10px; border-radius: 999px; background: --vurguBg--; color: --vurguText--; font-size: 0.8rem; font-weight: 750; text-align: center; font-variant-numeric: tabular-nums; }
+  .modulex-galeri-kategori-raflari-yon { display: flex; grid-column: 1 / -1; gap: 8px; }
+  .modulex-galeri-kategori-raflari:not(.modulex-galeri-kategori-raflari--rjs) .modulex-galeri-kategori-raflari-yon { display: none; }
+  .modulex-galeri-kategori-raflari-sira.modulex-galeri-kategori-raflari--sigar .modulex-galeri-kategori-raflari-yon { visibility: hidden; }
+  .modulex-galeri-kategori-raflari-yon .modulex-galeri-kategori-raflari-ok { width: 44px; height: 44px; }
+  .modulex-galeri-kategori-raflari-serit { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(220px, 21vw, 270px); gap: 14px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; padding-block-end: 10px; scrollbar-width: thin; }
+  .modulex-galeri-kategori-raflari-kart { display: grid; align-content: start; gap: 10px; scroll-snap-align: start; }
+  .modulex-galeri-kategori-raflari-kart .modulex-galeri-kategori-raflari-kap { position: relative; overflow: hidden; border-radius: calc(--yuvarlak-- * 0.7); background: --kartBg--; }
+  .modulex-galeri-kategori-raflari-kart .modulex-galeri-kategori-raflari-g { width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: cover; transition: transform 0.5s ease; }
+  .modulex-galeri-kategori-raflari-kart .modulex-galeri-kategori-raflari-yer { aspect-ratio: 16 / 10; }
+  .modulex-galeri-kategori-raflari-kart:hover .modulex-galeri-kategori-raflari-g { transform: scale(1.06); }
+  .modulex-galeri-kategori-raflari-sno { position: absolute; inset-block-start: 10px; inset-inline-start: 10px; padding: 2px 8px; border-radius: 6px; background: --bg--; color: --text--; font-size: 0.72rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .modulex-galeri-kategori-raflari-yazi { display: grid; gap: 4px; }
+  .modulex-galeri-kategori-raflari-yazi .modulex-galeri-kategori-raflari-kmetin { display: -webkit-box; overflow: hidden; font-size: 0.88rem; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  @media (max-width: 768px) {
+    .modulex-galeri-kategori-raflari-sira { grid-template-columns: minmax(0, 1fr); gap: 14px; padding-block-start: 16px; }
+    .modulex-galeri-kategori-raflari-sbas { position: static; grid-template-columns: auto auto minmax(0, 1fr); }
+    .modulex-galeri-kategori-raflari-yon { grid-column: auto; justify-content: flex-end; }
+    .modulex-galeri-kategori-raflari-yon .modulex-galeri-kategori-raflari-ok { width: 40px; height: 40px; }
+    .modulex-galeri-kategori-raflari-serit { grid-auto-columns: 70%; }
+  }
+  .modulex-galeri-kategori-raflari-yer { display: grid; place-items: center; width: 100%; aspect-ratio: 4 / 3; background: color-mix(in srgb, --accent-- 14%, --kartBg--); color: --accentInk--; }
+  .modulex-galeri-kategori-raflari-yer .material-symbols-outlined { font-size: 40px; }
+  .modulex-galeri-kategori-raflari-bag { color: inherit; text-decoration: none; }
+  .modulex-galeri-kategori-raflari-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-galeri-kategori-raflari-kbaslik { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+  .modulex-galeri-kategori-raflari-kmetin { color: --muted--; font-size: 0.95rem; line-height: 1.6; }
+  .modulex-galeri-kategori-raflari-kat { color: --accentInk--; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-galeri-kategori-raflari-kontrol { display: flex; gap: 10px; justify-content: flex-end; margin-block-start: 18px; }
+  .modulex-galeri-kategori-raflari-ok { display: inline-grid; place-items: center; width: 48px; height: 48px; border: 1px solid --cizgi--; border-radius: 50%; background: --kartBg--; color: --text--; transition: background 0.25s ease, color 0.25s ease, opacity 0.25s ease; }
+  .modulex-galeri-kategori-raflari-ok:hover:not(:disabled) { background: --accent--; color: --accentText--; }
+  .modulex-galeri-kategori-raflari-ok:disabled { opacity: 0.4; cursor: default; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-galeri-kategori-raflari :is(.modulex-galeri-kategori-raflari-baslik, .modulex-galeri-kategori-raflari-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-galeri-kategori-raflari-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-galeri-kategori-raflari { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-galeri-kategori-raflari *, .modulex-galeri-kategori-raflari *::before, .modulex-galeri-kategori-raflari *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-galeri-kategori-raflari";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const raflar = (s, P, az) => {
+        const R = [...s.querySelectorAll("[data-raf]")];
+        if (!R.length) return;
+        s.classList.add(P + "--rjs");
+        R.forEach((r) => {
+          const ray = r.querySelector("[data-raf-ray]");
+          const B = [...r.querySelectorAll("[data-raf-git]")];
+          if (!ray || !B.length) return;
+          const durum = () => {
+            const max = ray.scrollWidth - ray.clientWidth - 2;
+            const x = Math.abs(ray.scrollLeft);
+            B.forEach((b) => { b.disabled = max <= 0 || (Number(b.dataset.rafGit) < 0 ? x <= 2 : x >= max); });
+            r.classList.toggle(P + "--sigar", max <= 0);
+          };
+          B.forEach((b) => b.addEventListener("click", () => {
+            const rtl = getComputedStyle(ray).direction === "rtl";
+            ray.scrollBy({ left: Number(b.dataset.rafGit) * (rtl ? -1 : 1) * ray.clientWidth * 0.8, behavior: az ? "auto" : "smooth" });
+          }));
+          ray.addEventListener("scroll", durum, { passive: true });
+          window.addEventListener("resize", durum);
+          durum();
+        });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      raflar(s, P, az);
+    });
+  })();
+</script>

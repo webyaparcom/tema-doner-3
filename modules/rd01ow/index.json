@@ -1,0 +1,55 @@
+{
+  "name": "Galeri Kategori Rafları — her kategori kendi yatay rafında",
+  "description": "Görseller kategorilerine göre raflara ayrılır: her rafın başında kenar sütununda kategori adı, görsel sayısı rozeti ve kendi önceki/sonraki düğmeleri; yanında yatay kaydırılan (scroll-snap) numaralı görsel kartları (ad + iki satır açıklama). Kategorisi olmayanlar «Tümü» rafında; kategori yoksa tek raf. Düğmeler uçlarda pasifleşir, RTL'de yön ters. galeri-sekmeli ve galeri-filtre-cip aynı anda TEK kategoriyi gösterir, galeri-album-kutu kategorileri kapağa kapatır, galeri-film-serit tek ray. Bu modül tüm kategorileri aynı anda alt alta raflar halinde (yayın platformu satırları) açar; her rafın kendi kaydırma durumu ve düğmeleri vardır (çoklu ray istemcisi). Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "view_day",
+  "category": "galeri",
+  "subCategory": "category-rails",
+  "tags": [
+    "galeri",
+    "rails",
+    "categories",
+    "carousel",
+    "rows",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "tumu": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "img": "görsel yolu (boşsa yer tutucu)",
+      "baslik": "dil sözlüğü (resim adı)",
+      "alt": "dil sözlüğü (boşsa başlık)",
+      "metin": "dil sözlüğü (kısa açıklama)",
+      "kat": "kategori kimliği (desing.cats id'si)",
+      "url": "iç/dış bağlantı",
+      "w": "görsel genişliği (px, oran için)",
+      "h": "görsel yüksekliği (px)",
+      "kucuk": "küçük görsel (varsa ızgarada bu)"
+    }
+  }
+}

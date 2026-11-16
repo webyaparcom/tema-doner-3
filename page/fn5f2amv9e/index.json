@@ -1,0 +1,40 @@
+{
+  "id": "fn5f2amv9e",
+  "name": {
+    "tr": "Menü",
+    "en": "Menu",
+    "ar": "القائمة"
+  },
+  "description": {
+    "tr": "Dürümler, tabaklar ve yanında gelenler; örnek fiyatlar.",
+    "en": "Wraps, plates and sides; example prices.",
+    "ar": "اللفائف والأطباق والمرافقات؛ أسعار نموذجية."
+  },
+  "keyword": {
+    "tr": "döner, dürüm, fiyat",
+    "en": "doner, wrap, price",
+    "ar": "دونر، لفافة، سعر"
+  },
+  "path": "hizmetler",
+  "icon": "restaurant_menu",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "rd01ow",
+      "g0xegx"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Menü",
+    "en": "Menu",
+    "ar": "القائمة"
+  },
+  "date": "2026-11-16T20:25:23.599Z",
+  "update": "2026-11-16T20:35:11.006Z"
+}

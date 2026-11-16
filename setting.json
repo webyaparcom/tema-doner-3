@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Sarmal Döner: Şahinbey'de gündüz dürüm salonu; yaprak döner, dürüm ve tabaklar, canlı açık/kapalı levhası ve telefonla sipariş. Demo site; içerik kurgusaldır.",
+    "en": "Sarmal Doner: a daytime wrap house in Sahinbey; sliced doner, wraps and plates, a live open/closed sign and phone orders. Demo site; content is fictional.",
+    "ar": "سرمال دونر: صالة لفائف نهارية في شاهين بيه؛ دونر شرائح ولفائف وأطباق، مع لافتة مفتوح/مغلق حيّة وطلبات بالهاتف. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "döner, dürüm, yaprak döner, paket servis, öğle yemeği, Gaziantep",
+    "en": "doner, wrap, sliced doner, takeaway, lunch, Gaziantep",
+    "ar": "دونر، لفافة، دونر شرائح، طلبات خارجية، غداء، غازي عنتاب"
+  },
+  "category": "Kurumsal",
+  "name": "Sarmal Döner",
+  "domain": "doner-3.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "open-sans",
+    "heading": "rubik",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#C63D5A",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "1px",
+    "--mx-radius-md": "2px",
+    "--mx-radius-lg": "3px",
+    "--mx-radius-xl": "4px"
+  },
+  "icon": "icon.png"
+}

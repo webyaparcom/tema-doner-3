@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": "fn5f2amv9e",
+      "name": {
+        "tr": "Menü",
+        "en": "Menu",
+        "ar": "القائمة"
+      },
+      "description": {
+        "tr": "Dürümler, tabaklar ve yanında gelenler; örnek fiyatlar.",
+        "en": "Wraps, plates and sides; example prices.",
+        "ar": "اللفائف والأطباق والمرافقات؛ أسعار نموذجية."
+      },
+      "path": "hizmetler",
+      "icon": "restaurant_menu",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "rd01ow",
+          "g0xegx"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Hikâye",
+        "en": "Story",
+        "ar": "قصتنا"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "history",
+      "desing": {
+        "header": [],
+        "body": [
+          "mn9ld7",
+          "2ttvrx",
+          "6bj5le"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Dört tabureden bugüne; vardiya çizelgesi (kurgusal).",
+        "en": "From four stools to today; the shift chart (fictional).",
+        "ar": "من أربعة مقاعد إلى اليوم؛ جدول الورديات (افتراضي)."
+      }
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 2,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "jr7jfq",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Adres, açık/kapalı levhası ve harita.",
+        "en": "Address, open/closed sign and map.",
+        "ar": "العنوان ولافتة مفتوح/مغلق والخريطة."
+      }
+    }
+  ],
+  "desc": []
+}

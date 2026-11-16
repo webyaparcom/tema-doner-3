@@ -1,0 +1,136 @@
+<section class="modulex-iletisim-acik-kapali{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-iletisim-acik-kapali-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* iletisim-acik-kapali — iletisim-durum-rozeti süs nabızlı sabit rozet, iletisim-saat-cizelge aralıkları 24 saat eksenine çizer; bu modül GERÇEK DURUM levhası: tek aralıktan açık/kapalı hesabı (acikKapali; gece yarısı aşımı dahil), lamba + --oran çubuğu ve iki diyagonal gradient iple çiviye asılı sallanan levha. */
+  .modulex-iletisim-acik-kapali { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-iletisim-acik-kapali *, .modulex-iletisim-acik-kapali *::before, .modulex-iletisim-acik-kapali *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-iletisim-acik-kapali :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-iletisim-acik-kapali :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-iletisim-acik-kapali :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-iletisim-acik-kapali :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-iletisim-acik-kapali img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-iletisim-acik-kapali) img { height: auto; }
+  .modulex-iletisim-acik-kapali [hidden] { display: none !important; }
+  .modulex-iletisim-acik-kapali :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-iletisim-acik-kapali :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-iletisim-acik-kapali-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-iletisim-acik-kapali-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-iletisim-acik-kapali--bassiz .modulex-iletisim-acik-kapali-bas { display: none; }
+  .modulex-iletisim-acik-kapali-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-iletisim-acik-kapali-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-iletisim-acik-kapali-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-iletisim-acik-kapali-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-iletisim-acik-kapali-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-iletisim-acik-kapali-dugme:hover { transform: translateY(-2px); }
+  .modulex-iletisim-acik-kapali-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-iletisim-acik-kapali-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-iletisim-acik-kapali-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-iletisim-acik-kapali-kapi { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
+  .modulex-iletisim-acik-kapali-kapi--tek { grid-template-columns: minmax(0, 1fr); }
+  .modulex-iletisim-acik-kapali-kyazi2 { display: grid; gap: 16px; min-width: 0; }
+  .modulex-iletisim-acik-kapali-kliste { display: grid; gap: 12px; margin-block-start: 10px; }
+  .modulex-iletisim-acik-kapali-ksat2 { display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; border-radius: 14px; background: --kartBg--; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .modulex-iletisim-acik-kapali-ksat2:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -22px color-mix(in srgb, --text-- 60%, transparent); }
+  .modulex-iletisim-acik-kapali-kgov2 { display: grid; gap: 2px; min-width: 0; }
+  .modulex-iletisim-acik-kapali-kgov2 .modulex-iletisim-acik-kapali-eylem { margin-block-start: 4px; font-size: 0.92rem; }
+  .modulex-iletisim-acik-kapali-asma { position: relative; display: grid; justify-items: center; padding-block-start: 70px; }
+  .modulex-iletisim-acik-kapali-asma::before { content: ""; position: absolute; inset-block-start: 10px; inset-inline-start: 22%; inline-size: 56%; block-size: 64px; background: linear-gradient(to bottom right, transparent calc(50% - 1.5px), --muted-- calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1.5px)) 0 0 / 50% 100% no-repeat, linear-gradient(to bottom left, transparent calc(50% - 1.5px), --muted-- calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1.5px)) 100% 0 / 50% 100% no-repeat; }
+  .modulex-iletisim-acik-kapali-civi { position: absolute; inset-block-start: 0; inset-inline-start: calc(50% - 9px); z-index: 1; inline-size: 18px; block-size: 18px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, color-mix(in srgb, --bg-- 60%, --text--) 0 30%, --text-- 70%); box-shadow: 0 3px 6px color-mix(in srgb, --text-- 35%, transparent); }
+  .modulex-iletisim-acik-kapali-levha { position: relative; display: grid; justify-items: center; gap: 10px; inline-size: min(100%, 380px); padding: 30px 26px 34px; border: 3px solid --text--; border-radius: 22px; background: --kartBg--; text-align: center; box-shadow: 0 26px 40px -26px color-mix(in srgb, --text-- 60%, transparent); transform-origin: 50% -64px; animation: modulex-iletisim-acik-kapali-salla 5s ease-in-out infinite; transition: background 0.4s ease; }
+  .modulex-iletisim-acik-kapali-asma:hover .modulex-iletisim-acik-kapali-levha { animation-duration: 1.6s; }
+  @keyframes modulex-iletisim-acik-kapali-salla { 0%, 100% { transform: rotate(-1.6deg); } 50% { transform: rotate(1.6deg); } }
+  .modulex-iletisim-acik-kapali-lamba { position: absolute; inset-block-start: 14px; inset-inline-end: 16px; inline-size: 14px; block-size: 14px; border-radius: 50%; background: --cizgi--; transition: background 0.3s ease, box-shadow 0.3s ease; }
+  .modulex-iletisim-acik-kapali-levha.modulex-iletisim-acik-kapali--acik .modulex-iletisim-acik-kapali-lamba { background: --accent--; animation: modulex-iletisim-acik-kapali-yan 1.8s ease-in-out infinite; }
+  @keyframes modulex-iletisim-acik-kapali-yan { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, --accent-- 55%, transparent); } 50% { box-shadow: 0 0 0 8px transparent; } }
+  .modulex-iletisim-acik-kapali-levha.modulex-iletisim-acik-kapali--kapali { background: color-mix(in srgb, --text-- 6%, --kartBg--); }
+  .modulex-iletisim-acik-kapali-letk { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-iletisim-acik-kapali-lik { color: --accentInk--; font-size: 22px; }
+  .modulex-iletisim-acik-kapali-lsaat { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.3rem, 2.6vw, 1.9rem); font-weight: 800; line-height: 1.25; font-variant-numeric: tabular-nums; }
+  .modulex-iletisim-acik-kapali-kapali { padding: 6px 18px; border: 2px solid --text--; border-radius: 999px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-iletisim-acik-kapali-oran { position: absolute; inset-block-end: 12px; inset-inline: 26px; block-size: 6px; overflow: hidden; border-radius: 6px; background: --cizgi--; }
+  .modulex-iletisim-acik-kapali:not(.modulex-iletisim-acik-kapali--ojs) .modulex-iletisim-acik-kapali-oran, .modulex-iletisim-acik-kapali-levha.modulex-iletisim-acik-kapali--kapali .modulex-iletisim-acik-kapali-oran { display: none; }
+  .modulex-iletisim-acik-kapali-oran::after { content: ""; position: absolute; inset-block: 0; inset-inline-start: 0; inline-size: calc(var(--oran, 0) * 100%); border-radius: inherit; background: --accent--; transition: inline-size 0.6s ease; }
+  @media (max-width: 1024px) {
+    .modulex-iletisim-acik-kapali-kapi { grid-template-columns: minmax(0, 1fr); }
+    .modulex-iletisim-acik-kapali-asma { order: -1; }
+  }
+  @media (max-width: 768px) {
+    .modulex-iletisim-acik-kapali-levha { padding: 26px 18px 30px; }
+  }
+  .modulex-iletisim-acik-kapali-kikon { flex: none; display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: color-mix(in srgb, --accent-- 14%, transparent); color: --accentInk--; font-size: 24px; }
+  .modulex-iletisim-acik-kapali-ketiket { display: block; color: --muted--; font-size: 0.82rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; }
+  .modulex-iletisim-acik-kapali-deger { color: inherit; font-weight: 650; text-decoration: none; overflow-wrap: anywhere; transition: color 0.2s ease; }
+  a.modulex-iletisim-acik-kapali-deger:hover { color: --accentInk--; text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-iletisim-acik-kapali-eylem { display: inline-flex; align-items: center; gap: 6px; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.2s ease; }
+  .modulex-iletisim-acik-kapali-eylem:hover { gap: 10px; }
+  .modulex-iletisim-acik-kapali-eylem .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-acik-kapali-kopya { display: none; align-items: center; gap: 6px; min-height: 36px; padding: 6px 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: --text--; font: inherit; font-size: 0.85rem; font-weight: 650; transition: border-color 0.2s ease, background 0.2s ease; }
+  .modulex-iletisim-acik-kapali--kjs .modulex-iletisim-acik-kapali-kopya { display: inline-flex; }
+  .modulex-iletisim-acik-kapali-kopya:hover { border-color: --accent--; }
+  .modulex-iletisim-acik-kapali-kopya .material-symbols-outlined { font-size: 18px; }
+  .modulex-iletisim-acik-kapali--kopyalandi { background: color-mix(in srgb, --accent-- 14%, transparent); }
+  .modulex-iletisim-acik-kapali-sosyal { display: grid; gap: 10px; }
+  .modulex-iletisim-acik-kapali-sbaslik { color: --muted--; font-size: 0.9rem; font-weight: 650; }
+  .modulex-iletisim-acik-kapali-sliste { display: flex; flex-wrap: wrap; gap: 8px; }
+  .modulex-iletisim-acik-kapali-cip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 8px 14px; border: 1px solid --cizgi--; border-radius: 999px; color: inherit; font-weight: 650; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .modulex-iletisim-acik-kapali-cip:hover { border-color: --accent--; transform: translateY(-2px); }
+  .modulex-iletisim-acik-kapali-cikon { font-size: 18px; }
+  .modulex-iletisim-acik-kapali-harita { position: relative; overflow: hidden; min-height: 280px; border-radius: --yuvarlak--; background: --kartBg--; }
+  .modulex-iletisim-acik-kapali-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .modulex-iletisim-acik-kapali-hdesen { position: absolute; inset: 0; display: grid; place-items: center; background-color: color-mix(in srgb, --accent-- 8%, --kartBg--); background-image: linear-gradient(color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, --text-- 7%, transparent) 1px, transparent 1px), radial-gradient(circle at 30% 40%, color-mix(in srgb, --accent-- 18%, transparent) 0 18%, transparent 19%); background-size: 36px 36px, 36px 36px, 100% 100%; }
+  .modulex-iletisim-acik-kapali-pin { color: --accentInk--; font-size: 56px; animation: modulex-iletisim-acik-kapali-zipla 2.4s ease-in-out infinite; }
+  @keyframes modulex-iletisim-acik-kapali-zipla { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .modulex-iletisim-acik-kapali-hyol { position: absolute; inset-block-end: 16px; inset-inline-start: 16px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 16px; border-radius: 999px; background: --bg--; color: --text--; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px color-mix(in srgb, --text-- 16%, transparent); transition: transform 0.2s ease; }
+  .modulex-iletisim-acik-kapali-hyol:hover { transform: translateY(-2px); }
+  .modulex-iletisim-acik-kapali-hyol .material-symbols-outlined { font-size: 18px; color: --accentInk--; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-acik-kapali :is(.modulex-iletisim-acik-kapali-baslik, .modulex-iletisim-acik-kapali-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-iletisim-acik-kapali-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-iletisim-acik-kapali { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-iletisim-acik-kapali *, .modulex-iletisim-acik-kapali *::before, .modulex-iletisim-acik-kapali *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-iletisim-acik-kapali";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const acikKapali = (s, P) => {
+        s.querySelectorAll("[data-acik-bas]").forEach((t) => {
+          const b = Number(t.dataset.acikBas);
+          const e = Number(t.dataset.acikSon);
+          if (!Number.isFinite(b) || !Number.isFinite(e) || b === e) return;
+          const k = t.querySelector("[data-kapali]");
+          s.classList.add(P + "--ojs");
+          const yaz = () => {
+            const d = new Date();
+            const v = d.getHours() + d.getMinutes() / 60;
+            const acik = e > b ? v >= b && v < e : v >= b || v < e;
+            const sure = e > b ? e - b : 24 - b + e;
+            t.classList.toggle(P + "--acik", acik);
+            t.classList.toggle(P + "--kapali", !acik);
+            if (k) k.hidden = acik;
+            t.style.setProperty("--oran", acik ? (((v - b + 24) % 24) / sure).toFixed(3) : "0");
+          };
+          yaz();
+          setInterval(yaz, 60000);
+        });
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      acikKapali(s, P, az);
+    });
+  })();
+</script>
