@@ -1,0 +1,29 @@
+{
+  "name": "Sarmal Döner",
+  "short_name": "Sarmal Döner",
+  "description": "Sarmal Döner: Şahinbey'de gündüz dürüm salonu; yaprak döner, dürüm ve tabaklar, canlı açık/kapalı levhası ve telefonla sipariş. Demo site; içerik kurgusaldır.",
+  "start_url": "/tr/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C63D5A",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/img/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
