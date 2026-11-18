@@ -3,17 +3,23 @@
   "name": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "description": {
     "tr": "Kalite politikamız",
     "en": "Our quality policy",
-    "ar": "سياسة الجودة لدينا"
+    "ar": "سياسة الجودة لدينا",
+    "de": "Unsere Qualitätspolitik",
+    "ru": "Наша политика качества"
   },
   "keyword": {
     "tr": "Kalite Politikamız",
     "en": "quality policy, quality, continuous improvement",
-    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "path": "kalitepolitikamiz",
   "icon": "verified",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Kalite Politikamız</h2>\n<p>Her sabah taze et, tartılı porsiyon, günlük kızartma yağı ve kapanışta tezgâh temizliği.</p>",
     "en": "<h2>Our quality policy</h2>\n<p>Fresh meat every morning, weighed portions, daily frying oil and counter cleaning at closing.</p>",
-    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>لحم طازج كل صباح وحصص موزونة وزيت قلي يومي وتنظيف المنضدة عند الإغلاق.</p>"
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>لحم طازج كل صباح وحصص موزونة وزيت قلي يومي وتنظيف المنضدة عند الإغلاق.</p>",
+    "de": "<h2>Unsere Qualitätsrichtlinie</h2>\n<p>Frisches Fleisch jeden Morgen, gewogene Portionen, tägliches Frittieröl und Reinigung der Theke bei Schließung.</p>",
+    "ru": "<h2>Наша политика качества</h2>\n<p>Свежее мясо каждое утро, взвешенные порции, ежедневная замена масла для фритюра и уборка стойки при закрытии.</p>"
   },
   "title": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "date": "2026-11-16T20:25:23.461Z",
   "update": "2026-11-16T20:35:11.022Z",

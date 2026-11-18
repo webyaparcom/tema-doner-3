@@ -2,7 +2,9 @@
   "name": {
     "tr": "Hikâye",
     "en": "Story",
-    "ar": "قصتنا"
+    "ar": "قصتنا",
+    "de": "Geschichte",
+    "ru": "История"
   },
   "status": "play",
   "category": "",
@@ -24,7 +26,9 @@
   "description": {
     "tr": "Dört tabureden bugüne; vardiya çizelgesi (kurgusal).",
     "en": "From four stools to today; the shift chart (fictional).",
-    "ar": "من أربعة مقاعد إلى اليوم؛ جدول الورديات (افتراضي)."
+    "ar": "من أربعة مقاعد إلى اليوم؛ جدول الورديات (افتراضي).",
+    "de": "Von vier Hockern bis heute; der Schichtplan (fiktiv).",
+    "ru": "От четырех табуреток до наших дней; график смен (вымышленный)."
   },
   "spot": {
     "tr": "",
@@ -35,12 +39,16 @@
   "title": {
     "tr": "Hikâye",
     "en": "Story",
-    "ar": "قصتنا"
+    "ar": "قصتنا",
+    "de": "Geschichte",
+    "ru": "История"
   },
   "keyword": {
     "tr": "hikâye, usta",
     "en": "story, master",
-    "ar": "قصة، معلّم"
+    "ar": "قصة، معلّم",
+    "de": "Geschichte, Meister",
+    "ru": "история, мастер"
   },
   "text": {},
   "update": "2026-11-16T20:35:11.009Z",

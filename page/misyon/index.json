@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Öğle arasına sığan, sıcak ve ölçülü bir dürüm sunmak.</p>",
     "en": "<h2>Our mission</h2>\n<p>To serve a hot, fair wrap that fits into a lunch break.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>تقديم لفافة ساخنة ومعتدلة تتّسع لها استراحة الغداء.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>تقديم لفافة ساخنة ومعتدلة تتّسع لها استراحة الغداء.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Einen warmen, ausgewogenen Dürüm anzubieten, der in die Mittagspause passt.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Предлагать горячий, сбалансированный дюрюм, который укладывается в обеденный перерыв.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T20:25:23.461Z",
   "update": "2026-11-16T20:35:11.019Z",

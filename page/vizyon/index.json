@@ -3,17 +3,23 @@
   "name": {
     "tr": "Vizyon",
     "en": "Vision",
-    "ar": "الرؤية"
+    "ar": "الرؤية",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "description": {
     "tr": "Vizyonumuz",
     "en": "Our vision",
-    "ar": "رؤيتنا"
+    "ar": "رؤيتنا",
+    "de": "Unsere Vision",
+    "ru": "Наше видение"
   },
   "keyword": {
     "tr": "Vizyon",
     "en": "vision, our vision, goals",
-    "ar": "الرؤية, رؤيتنا, الأهداف"
+    "ar": "الرؤية, رؤيتنا, الأهداف",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "path": "vizyon",
   "icon": "visibility",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Vizyonumuz</h2>\n<p>Çarşının öğle sırasında en hızlı ilerleyen kuyruk olmak.</p>",
     "en": "<h2>Our vision</h2>\n<p>To be the fastest-moving queue at the market at lunchtime.</p>",
-    "ar": "<h2>رؤيتنا</h2>\n<p>أن نكون أسرع طابور في السوق وقت الغداء.</p>"
+    "ar": "<h2>رؤيتنا</h2>\n<p>أن نكون أسرع طابور في السوق وقت الغداء.</p>",
+    "de": "<h2>Unsere Vision</h2>\n<p>Die Schlange zu sein, die sich in der Mittagszeit des Basars am schnellsten bewegt.</p>",
+    "ru": "<h2>Наше видение</h2>\n<p>Быть самой быстрой очередью на базаре в обеденное время.</p>"
   },
   "title": {
     "tr": "Vizyon",
     "en": "Vision",
-    "ar": "الرؤية"
+    "ar": "الرؤية",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "date": "2026-11-16T20:25:23.461Z",
   "update": "2026-11-16T20:35:11.021Z",
