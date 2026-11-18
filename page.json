@@ -5,12 +5,16 @@
       "name": {
         "tr": "Menü",
         "en": "Menu",
-        "ar": "القائمة"
+        "ar": "القائمة",
+        "de": "Menü",
+        "ru": "Меню"
       },
       "description": {
         "tr": "Dürümler, tabaklar ve yanında gelenler; örnek fiyatlar.",
         "en": "Wraps, plates and sides; example prices.",
-        "ar": "اللفائف والأطباق والمرافقات؛ أسعار نموذجية."
+        "ar": "اللفائف والأطباق والمرافقات؛ أسعار نموذجية.",
+        "de": "Dürüm, Teller und Beilagen; Beispielpreise.",
+        "ru": "Дюрюмы, тарелки и гарниры; примерные цены."
       },
       "path": "hizmetler",
       "icon": "restaurant_menu",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Hikâye",
         "en": "Story",
-        "ar": "قصتنا"
+        "ar": "قصتنا",
+        "de": "Geschichte",
+        "ru": "История"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,14 +58,18 @@
       "description": {
         "tr": "Dört tabureden bugüne; vardiya çizelgesi (kurgusal).",
         "en": "From four stools to today; the shift chart (fictional).",
-        "ar": "من أربعة مقاعد إلى اليوم؛ جدول الورديات (افتراضي)."
+        "ar": "من أربعة مقاعد إلى اليوم؛ جدول الورديات (افتراضي).",
+        "de": "Von vier Hockern bis heute; der Schichtplan (fiktiv).",
+        "ru": "От четырех табуреток до наших дней; график смен (вымышленный)."
       }
     },
     {
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "اتصل بنا"
+        "ar": "اتصل بنا",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -80,7 +90,9 @@
       "description": {
         "tr": "Adres, açık/kapalı levhası ve harita.",
         "en": "Address, open/closed sign and map.",
-        "ar": "العنوان ولافتة مفتوح/مغلق والخريطة."
+        "ar": "العنوان ولافتة مفتوح/مغلق والخريطة.",
+        "de": "Adresse, Geöffnet-/Geschlossen-Schild und Karte.",
+        "ru": "Адрес, табличка «открыто/закрыто» и карта."
       }
     }
   ],

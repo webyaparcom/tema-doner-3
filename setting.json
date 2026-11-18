@@ -4,12 +4,16 @@
   "description": {
     "tr": "Sarmal Döner: Şahinbey'de gündüz dürüm salonu; yaprak döner, dürüm ve tabaklar, canlı açık/kapalı levhası ve telefonla sipariş. Demo site; içerik kurgusaldır.",
     "en": "Sarmal Doner: a daytime wrap house in Sahinbey; sliced doner, wraps and plates, a live open/closed sign and phone orders. Demo site; content is fictional.",
-    "ar": "سرمال دونر: صالة لفائف نهارية في شاهين بيه؛ دونر شرائح ولفائف وأطباق، مع لافتة مفتوح/مغلق حيّة وطلبات بالهاتف. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "سرمال دونر: صالة لفائف نهارية في شاهين بيه؛ دونر شرائح ولفائف وأطباق، مع لافتة مفتوح/مغلق حيّة وطلبات بالهاتف. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Sarmal Döner: Dürüm-Lokal für tagsüber in Şahinbey; Blätterdöner, Dürüm und Teller, Live-Schild offen/geschlossen und Bestellung per Telefon. Demo-Website; Inhalte sind fiktiv.",
+    "ru": "Sarmal Döner: дневная дюрюмная в Шахинбее; донер из пластов, дюрюмы и тарелки, табло «открыто/закрыто» в реальном времени и заказ по телефону. Демо-сайт; содержание условное."
   },
   "keyword": {
     "tr": "döner, dürüm, yaprak döner, paket servis, öğle yemeği, Gaziantep",
     "en": "doner, wrap, sliced doner, takeaway, lunch, Gaziantep",
-    "ar": "دونر، لفافة، دونر شرائح، طلبات خارجية، غداء، غازي عنتاب"
+    "ar": "دونر، لفافة، دونر شرائح، طلبات خارجية، غداء، غازي عنتاب",
+    "de": "Döner, Dürüm, Blätterdöner, Lieferservice, Mittagessen, Gaziantep",
+    "ru": "дёнер, дюрюм, листовой дёнер, доставка, обед, Газиантеп"
   },
   "category": "Kurumsal",
   "name": "Sarmal Döner",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,
